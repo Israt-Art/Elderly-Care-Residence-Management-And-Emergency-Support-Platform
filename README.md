@@ -16,9 +16,6 @@ This system helps **administrators, caregivers, and residents** manage daily act
 ---
 
 ## 👴 Elderly User Dashboard
-
-Residents can manage their daily health and services.
-
 - ❤️ Update daily health information (Sugar level, Blood Pressure, Overall Condition)
 - 🍽️ Select meals for breakfast, lunch, snacks, and dinner
 - 📊 View health history
@@ -29,21 +26,17 @@ Residents can manage their daily health and services.
 ---
 
 ## 🖥️ Admin / Management Dashboard
-
-Administrators can monitor residents and services.
-
 - 📋 View today's health updates
 - 🍽️ Monitor meal selections
 - 🏠 Manage resident list with room numbers
 - 🚨 Handle emergency alerts
 - 💳 View financial summaries
 - 📈 Generate monthly reports
-- 📊 View resident statistics and analytics
+- 📊 View resident statistics & analytics
 
 ---
 
 # 👥 Resident Management
-
 - 👤 Resident information (Name, Age, Photo, Room Number)
 - 🏥 Medical conditions (Diabetes, Blood Pressure, Allergies)
 - 📅 Daily health logs
@@ -52,18 +45,10 @@ Administrators can monitor residents and services.
 ---
 
 # 🍽️ Food & Kitchen Management
-
-Meals are automatically grouped based on dietary requirements.
-
-Diet categories:
-
 - 🩺 Diabetes-friendly
 - 🧂 Low-salt
 - 🥣 Soft food
 - ❤️ Heart patient diet
-
-Other features:
-
 - 📅 Daily meal plans
 - 📆 Weekly meal plans
 - 📊 Meal history tracking
@@ -71,7 +56,6 @@ Other features:
 ---
 
 # 🚨 Emergency Support System
-
 - 🔴 Emergency button for residents
 - ⏱️ Emergency logs with timestamp and room number
 - 🧑‍⚕️ Admin response tracking
@@ -80,7 +64,6 @@ Other features:
 ---
 
 # 💰 Financial Transparency
-
 - 💳 Resident account management
 - 💵 Multiple payment methods (Card, bKash, Rocket, Cash)
 - 📥 Deposit tracking
@@ -91,7 +74,6 @@ Other features:
 ---
 
 # ⭐ Premium Services
-
 💎 **Premium Package Price:** `৳10,000 BDT`
 
 Benefits:
@@ -101,24 +83,18 @@ Benefits:
 - 👩‍⚕️ Private caregiver
 - 🍱 Special meals
 
-Billing automatically adjusts when premium service is activated.
-
 ---
 
 # ⭐ Rating & Feedback
-
-Residents can rate services:
-
-- 🍽️ Food service
-- 🧹 Cleanliness
-- 🏥 Medical care
+- 🍽️ Food service rating
+- 🧹 Cleanliness rating
+- 🏥 Medical care rating
 - 📊 Automatic ranking calculation
 - 📝 Feedback tracking
 
 ---
 
 # 📊 Health Tracking & Reports
-
 Daily tracking includes:
 
 - 🛌 Sleep time
@@ -147,115 +123,38 @@ Reports include:
 # ⚙️ Installation Guide
 
 ## 📌 Prerequisites
-
-- PHP **7.4+**
-- MySQL **5.7+**
+- PHP 7.4+
+- MySQL 5.7+
 - Apache / Nginx
 - PHP extensions: `mysqli`, `pdo_mysql`, `mbstring`
 
 ---
 
-# 📥 Setup Steps
-
-## 1️⃣ Download or Clone Project
-
-Place project inside web server directory.
-
-Example:
-
-XAMPP → `C:\xampp\htdocs\elderly_care`  
-WAMP → `C:\wamp64\www\elderly_care`
-
----
-
-## 2️⃣ Create Database
-
-Import database schema:
-
-```bash
-mysql -u root -p < database/schema.sql
-```
-
-Or import `database/schema.sql` using **phpMyAdmin**.
-
----
-
-## 3️⃣ Configure Database Connection
-
-Edit:
-
-```
-config/database.php
-```
-
-Update credentials:
-
-```php
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'elderly_care_db');
-```
-
----
-
-## 4️⃣ Configure Site URL
-
-Edit:
-
-```
-config/config.php
-```
-
-```php
-define('SITE_URL', 'http://localhost/elderly_care');
-```
-
----
-
-## 5️⃣ Set Folder Permissions
-
-```
-chmod 755 assets/images
-```
-
----
-
-## 6️⃣ Access the Application
-
-Open browser:
-
-```
-http://localhost/elderly_care
-```
-
-or
-
-```
-http://localhost/elderly_care/index.php
-```
+## 📥 Setup Steps
+1. Download or clone project
+2. Import database schema (`database/schema.sql`)
+3. Configure database connection (`config/database.php`)
+4. Configure site URL (`config/config.php`)
+5. Set folder permissions (`assets/images`)
+6. Access the application via browser
 
 ---
 
 # 🔑 Default Login Credentials
 
 ## 👨‍💼 Admin
-
 | Field | Value |
 |------|------|
 | Username | admin |
 | Password | admin123 |
 
----
-
 ## 👴 Elderly User
-
 | Field | Value |
 |------|------|
 | Username | elderly1 |
 | Password | elderly123 |
 
-⚠️ Change these credentials in production.
+⚠️ Change credentials in production.
 
 ---
 
@@ -263,60 +162,81 @@ http://localhost/elderly_care/index.php
 
 ```
 elderly_care/
-│
 ├── config/
-│   ├── config.php
-│   └── database.php
-│
+│   ├── config.php          # General configuration
+│   └── database.php        # Database configuration
 ├── css/
+│   ├── style.css           # Main stylesheet
+│   └── admin.css           # Admin-specific styles
 ├── js/
+│   ├── main.js             # Common JavaScript
+│   ├── dashboard_elderly.js  # Elderly dashboard JS
+│   └── dashboard_admin.js    # Admin dashboard JS
 ├── php/
+│   ├── login.php           # Login processing
+│   ├── logout.php          # Logout processing
+│   ├── update_health.php   # Health update handler
+│   ├── submit_meals.php    # Meal selection handler
+│   ├── emergency.php       # Emergency alert handler
+│   ├── get_health_history.php  # Health history API
+│   ├── get_meal_history.php    # Meal history API
+│   ├── get_meal_plans.php      # Meal plans API
+│   └── admin/
+│       ├── respond_emergency.php  # Emergency response handler
+│       └── generate_report.php    # Report generator
 ├── pages/
+│   ├── home.php            # Home page
+│   ├── login.php           # Login page
+│   ├── about.php           # About page
+│   ├── services.php        # Services page
+│   ├── contact.php         # Contact page
+│   └── admin/
+│       ├── overview.php    # Admin overview
+│       ├── residents.php   # Residents list
+│       ├── health.php      # Health updates
+│       ├── meals.php       # Meal selections
+│       ├── emergencies.php # Emergency alerts
+│       ├── finance.php     # Financial management
+│       └── reports.php     # Reports & analytics
 ├── database/
+│   └── schema.sql          # Database schema
 ├── assets/
-│   └── images/
-│
-├── index.php
-├── dashboard_elderly.php
-├── dashboard_admin.php
-└── README.md
+│   └── images/             # Resident photos
+├── index.php               # Main entry point
+├── dashboard_elderly.php   # Elderly user dashboard
+├── dashboard_admin.php     # Admin dashboard
+└── README.md               # Project README
 ```
 
 ---
 
 # 🔒 Security Notes
-
 - Use `password_hash()` for passwords
-- Prevent **SQL Injection** using prepared statements
-- Escape outputs with `htmlspecialchars()`
+- Prevent SQL Injection using prepared statements
+- Escape output with `htmlspecialchars()`
 - Secure PHP sessions
 - Validate file uploads
 
 ---
 
 # 🚀 Future Enhancements
-
-- 📄 PDF report generation
-- 📧 Email notifications
-- 📱 SMS emergency alerts
-- 📲 Mobile application
-- 💬 Real-time chat support
-- 📅 Appointment scheduling
-- ⏰ Medication reminders
-- 👨‍👩‍👧 Family portal
+- PDF report generation
+- Email notifications
+- SMS emergency alerts
+- Mobile app
+- Real-time chat support
+- Appointment scheduling
+- Medication reminders
+- Family member portal
 
 ---
 
 # 📜 License
-
 Academic project for educational purposes.
 
 ---
 
 # 🙌 Credits
-
-Developed using:
-
 - HTML
 - CSS
 - JavaScript
