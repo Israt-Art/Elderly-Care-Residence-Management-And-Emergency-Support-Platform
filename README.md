@@ -1,301 +1,387 @@
-# Elderly Care Residence Management & Emergency Support Platform
+🏥 Elderly Care Residence Management & Emergency Support Platform
 
-A comprehensive web-based platform for managing elderly care residences with health monitoring, meal management, emergency support, and financial tracking features.
+A comprehensive web-based platform designed to manage elderly care residences with health monitoring, meal management, emergency support, and financial transparency.
 
-## Features
+This system helps administrators, caregivers, and residents manage daily activities while ensuring safety, healthcare tracking, and efficient communication.
 
-### 1. Authentication System
-- Role-based login (Elderly User / Admin)
-- Secure session management
-- Role-based redirection after login
+✨ Key Features
+🔐 Authentication System
 
-### 2. Elderly User Dashboard
-- Update daily health information (sugar level, blood pressure, overall condition)
-- Select meals for breakfast, lunch, snacks, and dinner
-- View health history and meal history
-- Emergency alert button (24/7 support)
-- View account balance
+👤 Role-based login (Elderly User / Admin)
 
-### 3. Admin/Management Dashboard
-- View today's health updates from all residents
-- View today's meal selections
-- Resident list with room numbers and health conditions
-- Emergency alert management
-- Financial summaries and transaction history
-- Generate monthly reports (health, meals, financial, emergencies)
-- View resident statistics and analytics
+🔑 Secure session management
 
-### 4. Resident Management
-- Store resident information (name, age, photo, room number)
-- Medical information (diabetes, blood pressure, allergies)
-- Daily health logs
-- Medicine schedule tracking
+🔄 Automatic role-based dashboard redirection
 
-### 5. Food & Kitchen Management
-- Automatic grouping based on diet type:
-  - Diabetes-friendly
-  - Low-salt
-  - Soft food
-  - Heart patient diet
-- Daily and weekly meal plans
-- Meal history tracking
+👴 Elderly User Dashboard
 
-### 6. Emergency Support System
-- Red emergency button for each resident
-- Emergency alert logs with timestamp and room number
-- Admin response tracking
-- Emergency incident history
+Residents can easily manage their daily health and services.
 
-### 7. Financial Transparency
-- Resident account management
-- Multiple payment methods (Card, bKash, Rocket, Cash)
-- Deposit and withdrawal tracking
-- Service charges
-- Monthly financial reports
-- View-only access for family members
+❤️ Update daily health information
+(Sugar level, Blood Pressure, Overall Condition)
 
-### 8. Premium Services
-- Premium package: ৳10,000 BDT
-- Benefits:
-  - Extra checkups
-  - Priority medical response
-  - Private caregiver
-  - Special meals
-- Automatic billing adjustment
+🍽️ Select meals for:
 
-### 9. Rating & Feedback
-- Rate food service, cleanliness, and medical care
-- Automatic ranking calculation
-- Feedback tracking
+Breakfast
 
-### 10. Tracking & Reports
-- Daily tracking:
-  - Sleep time
-  - Medicine intake
-  - Sugar level
-  - Blood pressure
-- Health improvement history
-- Monthly reports per resident
+Lunch
 
-## Technology Stack
+Snacks
 
-- **Frontend:** HTML5, CSS3, JavaScript
-- **Backend:** PHP 7.4+
-- **Database:** MySQL 5.7+
-- **Server:** Apache/Nginx with PHP
+Dinner
 
-## Installation
+📊 View health history
 
-### Prerequisites
-- PHP 7.4 or higher
-- MySQL 5.7 or higher
-- Apache/Nginx web server
-- PHP extensions: mysqli, pdo_mysql, mbstring
+🍱 View meal history
 
-### Setup Steps
+🚨 Emergency Alert Button (24/7 support)
 
-1. **Clone or Download the Project**
-   ```bash
-   # Place the project files in your web server directory
-   # For XAMPP: C:\xampp\htdocs\elderly_care
-   # For WAMP: C:\wamp64\www\elderly_care
-   ```
+💰 View account balance
 
-2. **Create Database**
-   - Open phpMyAdmin or MySQL command line
-   - Import the database schema:
-   ```bash
-   mysql -u root -p < database/schema.sql
-   ```
-   Or import `database/schema.sql` through phpMyAdmin
+🖥️ Admin / Management Dashboard
 
-3. **Configure Database Connection**
-   - Edit `config/database.php`
-   - Update database credentials:
-   ```php
-   define('DB_HOST', 'localhost');
-   define('DB_USER', 'root');
-   define('DB_PASS', '');
-   define('DB_NAME', 'elderly_care_db');
-   ```
+Administrators can monitor all residents and services.
 
-4. **Configure Site URL**
-   - Edit `config/config.php`
-   - Update if needed:
-   ```php
-   define('SITE_URL', 'http://localhost/elderly_care');
-   ```
+📋 View daily health updates
 
-5. **Set Permissions**
-   - Ensure `assets/images` folder is writable (for photo uploads)
-   ```bash
-   chmod 755 assets/images
-   ```
+🍽️ Monitor meal selections
 
-6. **Access the Application**
-   - Open browser: `http://localhost/elderly_care`
-   - Or: `http://localhost/elderly_care/index.php`
+🏠 Manage resident list with room numbers
 
-## Default Login Credentials
+🚨 Handle emergency alerts
 
-### Admin
-- **Username:** `admin`
-- **Password:** `admin123`
+💳 View financial summaries
 
-### Elderly User
-- **Username:** `elderly1`
-- **Password:** `elderly123`
+📈 Generate monthly reports
 
-**Note:** These are default credentials from sample data. Change passwords in production!
+📊 View resident statistics & analytics
 
-## Project Structure
+👥 Resident Management
 
-```
+Store and manage resident data efficiently.
+
+👤 Resident profile:
+
+Name
+
+Age
+
+Photo
+
+Room number
+
+🏥 Medical information:
+
+Diabetes
+
+Blood pressure
+
+Allergies
+
+📅 Daily health logs
+
+💊 Medicine schedule tracking
+
+🍽️ Food & Kitchen Management
+
+Meals are automatically grouped based on dietary requirements.
+
+Diet categories include:
+
+🩺 Diabetes-friendly
+
+🧂 Low-salt
+
+🥣 Soft food
+
+❤️ Heart patient diet
+
+Other features:
+
+📅 Daily meal plans
+
+📆 Weekly meal planning
+
+📊 Meal history tracking
+
+🚨 Emergency Support System
+
+Ensuring quick response during emergencies.
+
+🔴 Emergency button for each resident
+
+⏱️ Emergency logs with timestamp & room number
+
+🧑‍⚕️ Admin response tracking
+
+📜 Emergency incident history
+
+💰 Financial Transparency
+
+Transparent financial tracking for residents and families.
+
+💳 Resident account management
+
+💵 Multiple payment methods:
+
+Card
+
+bKash
+
+Rocket
+
+Cash
+
+📥 Deposit tracking
+
+📤 Withdrawal tracking
+
+📊 Monthly financial reports
+
+👨‍👩‍👧 Family view-only access
+
+⭐ Premium Services
+
+Premium care package for additional services.
+
+💎 Premium Package Price: ৳10,000 BDT
+
+Benefits
+
+🩺 Extra medical checkups
+
+🚑 Priority medical response
+
+👩‍⚕️ Private caregiver
+
+🍱 Special meals
+
+💰 Billing automatically adjusts when premium service is activated.
+
+⭐ Rating & Feedback System
+
+Residents can rate services to maintain quality.
+
+🍽️ Food service rating
+
+🧹 Cleanliness rating
+
+🏥 Medical care rating
+
+📊 Automatic ranking calculation
+
+📝 Feedback tracking
+
+📊 Health Tracking & Reports
+
+The system continuously tracks resident health data.
+
+Daily tracking includes:
+
+🛌 Sleep time
+
+💊 Medicine intake
+
+🩸 Sugar level
+
+❤️ Blood pressure
+
+Reports include:
+
+📈 Health improvement history
+
+📅 Monthly reports per resident
+
+🛠 Technology Stack
+Layer	Technology
+🎨 Frontend	HTML5, CSS3, JavaScript
+⚙️ Backend	PHP 7.4+
+🗄 Database	MySQL 5.7+
+🌐 Server	Apache / Nginx
+⚙️ Installation Guide
+📌 Prerequisites
+
+Make sure the following are installed:
+
+PHP 7.4 or higher
+
+MySQL 5.7 or higher
+
+Apache / Nginx
+
+PHP Extensions:
+
+mysqli
+
+pdo_mysql
+
+mbstring
+
+📥 Setup Steps
+1️⃣ Download or Clone the Project
+
+Place project files inside your web server directory.
+
+Example:
+
+XAMPP → C:\xampp\htdocs\elderly_care
+WAMP  → C:\wamp64\www\elderly_care
+2️⃣ Create Database
+
+Import database schema:
+
+mysql -u root -p < database/schema.sql
+
+Or import database/schema.sql via phpMyAdmin.
+
+3️⃣ Configure Database Connection
+
+Edit:
+
+config/database.php
+
+Update credentials:
+
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'elderly_care_db');
+4️⃣ Configure Site URL
+
+Edit:
+
+config/config.php
+define('SITE_URL', 'http://localhost/elderly_care');
+5️⃣ Set Folder Permissions
+
+Make sure the image folder is writable:
+
+chmod 755 assets/images
+6️⃣ Access the Application
+
+Open browser:
+
+http://localhost/elderly_care
+
+or
+
+http://localhost/elderly_care/index.php
+🔑 Default Login Credentials
+👨‍💼 Admin
+Field	Value
+Username	admin
+Password	admin123
+👴 Elderly User
+Field	Value
+Username	elderly1
+Password	elderly123
+
+⚠️ Important: Change these credentials in production.
+
+📁 Project Structure
 elderly_care/
+│
 ├── config/
-│   ├── config.php          # General configuration
-│   └── database.php        # Database configuration
+│   ├── config.php
+│   └── database.php
+│
 ├── css/
-│   ├── style.css          # Main stylesheet
-│   └── admin.css          # Admin-specific styles
+│   ├── style.css
+│   └── admin.css
+│
 ├── js/
-│   ├── main.js            # Common JavaScript
-│   ├── dashboard_elderly.js  # Elderly dashboard JS
-│   └── dashboard_admin.js    # Admin dashboard JS
+│   ├── main.js
+│   ├── dashboard_elderly.js
+│   └── dashboard_admin.js
+│
 ├── php/
-│   ├── login.php          # Login processing
-│   ├── logout.php         # Logout processing
-│   ├── update_health.php  # Health update handler
-│   ├── submit_meals.php   # Meal selection handler
-│   ├── emergency.php      # Emergency alert handler
-│   ├── get_health_history.php  # Health history API
-│   ├── get_meal_history.php    # Meal history API
-│   ├── get_meal_plans.php      # Meal plans API
+│   ├── login.php
+│   ├── logout.php
+│   ├── update_health.php
+│   ├── submit_meals.php
+│   ├── emergency.php
+│   ├── get_health_history.php
+│   ├── get_meal_history.php
+│   ├── get_meal_plans.php
 │   └── admin/
-│       ├── respond_emergency.php  # Emergency response handler
-│       └── generate_report.php    # Report generator
+│       ├── respond_emergency.php
+│       └── generate_report.php
+│
 ├── pages/
-│   ├── home.php           # Home page
-│   ├── login.php          # Login page
-│   ├── about.php          # About page
-│   ├── services.php       # Services page
-│   ├── contact.php        # Contact page
+│   ├── home.php
+│   ├── login.php
+│   ├── about.php
+│   ├── services.php
+│   ├── contact.php
 │   └── admin/
-│       ├── overview.php   # Admin overview
-│       ├── residents.php  # Residents list
-│       ├── health.php     # Health updates
-│       ├── meals.php      # Meal selections
-│       ├── emergencies.php # Emergency alerts
-│       ├── finance.php    # Financial management
-│       └── reports.php    # Reports & analytics
+│       ├── overview.php
+│       ├── residents.php
+│       ├── health.php
+│       ├── meals.php
+│       ├── emergencies.php
+│       ├── finance.php
+│       └── reports.php
+│
 ├── database/
-│   └── schema.sql         # Database schema
+│   └── schema.sql
+│
 ├── assets/
-│   └── images/            # Resident photos (create this folder)
-├── index.php              # Main entry point
-├── dashboard_elderly.php  # Elderly user dashboard
-├── dashboard_admin.php    # Admin dashboard
-└── README.md             # This file
-```
+│   └── images/
+│
+├── index.php
+├── dashboard_elderly.php
+├── dashboard_admin.php
+└── README.md
+🔒 Security Notes
 
-## Database Schema
+For production deployment:
 
-The database includes the following tables:
-- `users` - Authentication and user accounts
-- `residents` - Resident information
-- `medical_info` - Medical conditions and diet types
-- `health_records` - Daily health tracking
-- `meal_choices` - Meal selections
-- `meal_plans` - Available meal plans
-- `emergency_logs` - Emergency incidents
-- `payments` - Financial transactions
-- `account_balance` - Resident account balances
-- `premium_services` - Premium subscriptions
-- `ratings` - Ratings and feedback
-- `medicine_schedule` - Medicine schedules
+🔐 Use password_hash() for passwords
 
-## Usage
+🛡️ Prevent SQL Injection using prepared statements
 
-### For Elderly Users:
-1. Login with elderly credentials
-2. Update daily health information
-3. Select meals for the day
-4. View health and meal history
-5. Use emergency button if needed
+🧹 Escape output using htmlspecialchars()
 
-### For Admin:
-1. Login with admin credentials
-2. View overview dashboard
-3. Monitor residents' health updates
-4. Manage emergency alerts
-5. View financial summaries
-6. Generate monthly reports
+🔑 Secure PHP sessions
 
-## Security Notes
+📁 Validate uploaded files
 
-- **Password Hashing:** In production, ensure all passwords are properly hashed using `password_hash()`
-- **SQL Injection:** All queries use prepared statements
-- **XSS Protection:** Output is escaped using `htmlspecialchars()`
-- **Session Security:** Ensure secure session configuration in production
-- **File Uploads:** Implement proper validation for file uploads
+🚀 Future Enhancements
 
-## Customization
+Planned improvements:
 
-### Changing Premium Package Price
-Edit `config/config.php`:
-```php
-define('PREMIUM_PACKAGE_PRICE', 10000.00);
-```
+📄 PDF report generation
 
-### Adding More Diet Types
-Update the `diet_type` ENUM in `medical_info` table and `meal_plans` table.
+📧 Email notifications
 
-### Modifying Meal Types
-Update the `meal_type` ENUM in `meal_choices` and `meal_plans` tables.
+📱 SMS emergency alerts
 
-## Troubleshooting
+📲 Mobile application
 
-### Database Connection Error
-- Check database credentials in `config/database.php`
-- Ensure MySQL service is running
-- Verify database name exists
+💬 Real-time chat support
 
-### Session Errors
-- Ensure `session_start()` is called before any output
-- Check PHP session configuration
-- Verify file permissions
+📅 Appointment scheduling
 
-### CSS/JS Not Loading
-- Check file paths (relative paths are used)
-- Ensure CSS and JS folders exist
-- Clear browser cache
+⏰ Medication reminders
 
-## Future Enhancements
+👨‍👩‍👧 Family member portal
 
-- PDF report generation
-- Email notifications
-- SMS alerts for emergencies
-- Mobile app integration
-- Real-time chat support
-- Appointment scheduling
-- Medication reminders
-- Family member portal
+📜 License
 
-## License
+This project is developed for academic and educational purposes.
 
-This is an academic project for educational purposes.
+🙌 Credits
 
-## Support
+Developed using:
 
-For issues or questions:
-- Check the documentation
-- Review the code comments
-- Contact the development team
+HTML
 
-## Credits
+CSS
 
-Developed as a comprehensive full-stack web application using HTML, CSS, PHP, and MySQL.
+JavaScript
 
----
+PHP
 
-**Note:** This is an academic project. For production use, implement additional security measures, error handling, and testing.
+MySQL
+
+✨ Academic Full-Stack Web Development Project
